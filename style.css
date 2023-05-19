@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    min-height: 100vh;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 333px;
+
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+    transition: all 1s;
+}
+
+.background{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.front{
+    background-image: url(guilherme2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: 7px;
+}
+
+.front h2::after{
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 11rem;
+    height: 0.3rem;
+    margin: 0 auto;
+}
+
+.back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    backface-visibility: hidden;
+    background-color: #314154;
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back h2{
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+.back p{
+    margin-bottom: 1rem;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+.buttons button{
+    cursor: pointer;
+}
+
+.media{
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+    padding: 2rem;
+}
+
+.media i{
+    font-size: 2.5rem;
+}
+
+.like-button button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1rem;
+    width: 200px;
+    height: 50px;
+
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.like-button p{
+    font-size: 3rem;
+    padding-bottom: 0.2rem;
+}
+
+.like-button i{
+    font-size: 3.7rem;
+}
